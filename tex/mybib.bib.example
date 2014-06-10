@@ -1,0 +1,86 @@
+In this file are some empty entries for the bibtex file A %-sign in front of the key means that it is optionally
+
+@article{Xarticle,
+    author = "",
+    title = "",
+    journal = "",
+    %volume = "",
+    %number = "",
+    %pages = "",
+    year = "XXXX",
+    %month = "",
+    %note = "",
+}
+
+@book{Xbook,
+    author = "",
+    title = "",
+    publisher = "",
+    %volume = "",
+    %number = "",
+    %series = "",
+    %address = "",
+    %edition = "",
+    year = "XXXX",
+    %month = "",
+    %note = "",
+}
+
+@booklet{Xbooklet,
+    %author = "",
+    title = "",
+    %howpublished = "",
+    %address = "",
+    year = "XXXX",
+    %month = "",
+    %note = "",
+}
+
+@conference{Xconference,
+    author = "",
+    title = "",
+    booktitle = "",
+    %editor = "",
+    %volume = "",
+    %number = "",
+    %series = "",
+    %pages = "",
+    %address = "",
+    year = "XXXX",
+    %month = "",
+    %publisher= "",
+    %note = "",
+}
+
+@mastersthesis{Xthesis,
+    author = "",
+    title = "",
+    school = "",
+    %type = "diploma thesis",
+    %address = "",
+    year = "XXXX",
+    %month = "",
+    %note = "",
+}
+
+@misc{Xmisc,
+    %author = "",
+    %title = "",
+    %howpublished = "",
+    %year = "XXXX",
+    %month = "",
+    %note = "",
+}
+
+@techreport{Xtreport,
+    author = "",
+    title = "",
+    institution = "",
+    %type = "",
+    %number = "",
+    %address = "",
+    year = "XXXX",
+    %month = "",
+    %note = "",
+}
+
