@@ -17,3 +17,8 @@ out/report.pdf : tex/*.tex
 	-mkdir out
 	mv tex/report.pdf out/report.pdf
 	-cd tex && rm report.^tex
+
+.PHONY: clean
+clean:
+	rm -rf tex/gnuplottex
+	cd tex && latexmk -c
