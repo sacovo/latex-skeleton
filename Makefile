@@ -5,15 +5,17 @@ report: out/report.pdf
 .PHONY: presentation
 presentation: out/presentation.pdf
 
+all_deps := tex/presentation.tex tex/mystyle.sty tex/maturastyle.bst tex/mybib.bib
+pres_deps := $(shell find tex/presentation | grep ".tex")
+rep_deps := $(shell find tex/report/ | grep ".tex")
 
-out/presentation.pdf : tex/presentation.tex tex/presentation/*.tex
+
+out/presentation.pdf : tex/presentation.tex $(all_deps) $(pres_deps)
 	-cd tex && latexmk -pdf -shell-escape presentation.tex
-	-mkdir out
 	mv tex/presentation.pdf out/presentation.pdf
 
-out/report.pdf : tex/*.tex
+out/report.pdf : tex/report.tex $(all_deps) $(rep_deps)
 	-cd tex && latexmk -pdf -shell-escape report.tex
-	-mkdir out
 	mv tex/report.pdf out/report.pdf
 
 .PHONY: clean
