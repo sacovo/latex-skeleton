@@ -15,14 +15,14 @@ out/presentation.pdf : tex/presentation.tex $(all_deps) $(pres_deps) $(sage_deps
 	-mkdir out
 	-cd tex && latexmk -pdf -shell-escape presentation.tex
 	-find . -type f -name '*.sage' -execdir sage {} +
-	-latexmk -pdf -shell-escape report.tex
+	-cd tex && latexmk -pdf -shell-escape report.tex
 	mv tex/presentation.pdf out/presentation.pdf
 
 out/report.pdf : tex/report.tex $(all_deps) $(rep_deps) $(sage_deps)
 	-mkdir out
 	-cd tex && latexmk -pdf -shell-escape report.tex
 	-find . -type f -name '*.sage' -execdir sage {} +
-	-latexmk -pdf -shell-escape report.tex
+	-cd tex && latexmk -pdf -shell-escape report.tex
 	mv tex/report.pdf out/report.pdf
 
 .PHONY: clean
