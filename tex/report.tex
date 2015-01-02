@@ -1,7 +1,10 @@
-\documentclass{scrreprt}
+\documentclass[a4paper,numbers=noendperiod,bibliography=totoc]{scrreprt}
 \usepackage{mystyle}
 
 \begin{document}
+\setbibpreamble{
+% Bibnote
+\par\bigskip}
 
 \input{report/title.tex}
 
@@ -11,14 +14,17 @@
 \thispagestyle{empty}
 \listoftables
 \thispagestyle{empty}
-
-\input{report/abstract.tex}
-\input{report/intro/intro.tex}
-\input{report/chapter1/chap1.tex}
-
+\begin{abstract}
+\end{abstract}
+\input{report/00-preamble.tex}
+\input{report/01-abstract.tex}
+\input{report/02-intro.tex}
+\input{report/03-methods.tex}
+\input{report/04-results.tex}
+\input{report/05-discussion.tex}
+\input{report/06-glossar.tex}
+\input{report/07-bibliography.tex}
 \appendix
-\nocite{*}
-\bibliographystyle{plainnat}
-\bibliography{mybib}
+\input{report/08-appendix.tex}
 
 \end{document}
